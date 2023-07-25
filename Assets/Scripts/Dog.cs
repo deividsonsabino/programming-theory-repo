@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Dog : Animal
 {
-    // Start is called before the first frame update
-    void Start()
+    private string breed;
+
+    public Dog(string breed)
     {
-        
+        this.breed = breed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public new string Species
     {
-        
+        get { return "Dog"; }
+    }
+
+    public void Bark()
+    {
+        Debug.Log("Woof! Woof!");
+    }
+
+    // Inheritance 
+    public override void Speak()
+    {
+        Debug.Log("Bark! Bark!");
     }
 }

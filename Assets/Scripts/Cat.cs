@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cat : Animal
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public string furColor;
+
+    public Cat(string furColor)
     {
-        
+        this.furColor = furColor;
     }
 
-    // Update is called once per frame
-    void Update()
+    public new string Species
     {
-        
+        get { return "Cat"; }
     }
+
+    public void Purr()
+    {
+        Debug.Log("Purr... Purr...");
+    }
+
+
+    // Inheritance
+    public override void Speak()
+    {
+        Debug.Log("Meow! Meow!");
+    }
+
 }
